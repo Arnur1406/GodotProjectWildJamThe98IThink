@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://k40tn5y6ygr6"]
+
+[ext_resource type="Script" uid="uid://cnny3og45cg34" path="res://Scenes/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://dwfcqkq74al47" path="res://icon.svg" id="2_6t5aa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0eb53"]
+radius = 50.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vanes"]
+radius = 150.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1823682154]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_cvnsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=986475370]
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("2_6t5aa")
+
+[node name="WallCollisions" type="CollisionShape2D" parent="." unique_id=257957811]
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("CircleShape2D_0eb53")
+
+[node name="DigArea" type="Area2D" parent="." unique_id=1740094242]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DigArea" unique_id=1385201648]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CircleShape2D_vanes")
+debug_color = Color(0.99594396, 0, 0.20445159, 0.41960785)
