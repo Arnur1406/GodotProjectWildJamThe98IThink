@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b2hoqrb7m02q4"]
+
+[ext_resource type="Texture2D" uid="uid://dwfcqkq74al47" path="res://icon.svg" id="1_w4ni4"]
+[ext_resource type="Script" uid="uid://dfdl1jnyssv73" path="res://Scripts/test_button.gd" id="2_37l0f"]
+
+[node name="MapFour" type="Node2D" unique_id=1031585083]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=302347406]
+position = Vector2(69, 66)
+texture = ExtResource("1_w4ni4")
+
+[node name="TestButton" type="Button" parent="Icon" unique_id=465135278]
+offset_left = 298.0
+offset_top = 123.0
+offset_right = 342.0
+offset_bottom = 154.0
+text = "TEST"
+script = ExtResource("2_37l0f")
+
+[connection signal="pressed" from="Icon/TestButton" to="Icon/TestButton" method="_on_pressed"]

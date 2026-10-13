@@ -4,7 +4,7 @@ extends Control
 
 
 func _on_play_button_pressed() -> void:
-	pass
+	GameManager.switch_scenes()
 
 
 func _on_options_button_pressed() -> void:
