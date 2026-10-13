@@ -1,9 +1,14 @@
-
 extends CharacterBody2D
+
 
 @export var speed: float = 200.0
 
+
 func _physics_process(_delta: float) -> void:
+	get_movement_input()
+
+
+func get_movement_input():
 	var direction := Input.get_vector(
 		"move_left",
 		"move_right",
